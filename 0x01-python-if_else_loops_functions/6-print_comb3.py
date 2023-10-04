@@ -2,7 +2,7 @@
 
 for j in range(10):
     for k in range(j + 1, 10):
-        if j < 9:
-            print("{:d}{:d}, ".format(j, k), end="")
-        else:
+        if j == 8 and k == 9:
             print("{:d}{:d}".format(j, k))
+        else:
+            print("{:d}{:d}, ".format(j, k), end="")
