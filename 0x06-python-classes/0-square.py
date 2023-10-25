@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
-"""Inside this codebasena class named Square is defiened."""
+"""Define a new class Square."""
+
 
 class Square:
-    """A void blueprint code to represent a square."""
+    """Represents a simple square."""
     pass
