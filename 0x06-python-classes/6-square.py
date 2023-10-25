@@ -11,14 +11,14 @@ class Square:
 
         Args:
             size (int): This is the size of the new square instance.
-            position (int, int): This reps the  posh of the new square instance.
+            position (int, int): This reps the  position of the new square instance.
         """
         self.size = size
         self.position = position
 
     @property
     def size(self):
-        """Gets/sets d curr size of the square instance."""
+        """Gets/sets curr size of the square instance."""
         return (self.__size)
 
     @size.setter
@@ -31,7 +31,7 @@ class Square:
 
     @property
     def position(self):
-        """Gets/sets d curr posh of the square instance."""
+        """Gets/sets curr posh of the square instance."""
         return (self.__position)
 
     @position.setter
@@ -44,7 +44,7 @@ class Square:
         self.__position = value
 
     def area(self):
-        """Returns d curr area of the square instance."""
+        """Returns curr area of the square instance."""
         return (self.__size * self.__size)
 
     def my_print(self):
