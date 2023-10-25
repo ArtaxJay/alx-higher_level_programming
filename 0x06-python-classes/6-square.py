@@ -11,7 +11,7 @@ class Square:
 
         Args:
             size (int): This is the size of the new square instance.
-            position (int, int): This reps the  position of the new square instance.
+            position (int, int): This reps the  posh of new square instance.
         """
         self.size = size
         self.position = position
