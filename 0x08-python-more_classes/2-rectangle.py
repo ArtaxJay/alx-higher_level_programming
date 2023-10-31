@@ -3,21 +3,21 @@
 
 
 class Rectangle:
-"""Defines a rectangle..."""
+    """Defines a rectangle..."""
 
     def __init__(self, width=0, height=0):
-        """Instantiates new Rectangle object.
-
+        """Instantiates  new Rectangle object.
         Args:
-			width (int): be the rect's width.
-			height (int): be the rect's height
+            width (int): be the rect's width.
+            height (int): be the rect's height.
         """
         self.width = width
         self.height = height
 
     @property
     def width(self):
-		"""Gets or sets d width of d rect."""
+        """Gets or sets d width of d rect.
+"""
         return self.__width
 
     @width.setter
@@ -30,7 +30,8 @@ class Rectangle:
 
     @property
     def height(self):
-		"""Gets or sets d height of d rect."""
+        """Gets or sets d height of d rect
+."""
         return self.__height
 
     @height.setter
