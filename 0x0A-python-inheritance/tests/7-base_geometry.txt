@@ -1,0 +1,98 @@
+``7-base_geometry`` doctest
+==============================
+
+Class is ``BaseGeometry``
+----------------------
+
+Import module class:
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+
+Print the Area when not implemented yet
+    >>> bg = BaseGeometry()
+    >>> bg.area()
+    Traceback (most recent call last):
+    Exception: area() is not implemented
+
+Try and pass non-int args
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("name", "8")
+    Traceback (most recent call last):
+    TypeError: `name` must be of type `int`
+
+Try & pass a bool args
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("name", True)
+    Traceback (most recent call last):
+    TypeError: `name` must be of type `int`
+
+Try & pass -ve args
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("name", -8)
+    Traceback (most recent call last):
+    ValueError: `name` must be > 0.
+
+
+Try & pass 0
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("name", 0)
+    Traceback (most recent call last):
+    ValueError: `name` must be > 0.
+
+Pass +ve args
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("name", 8)
+
+Pass args to integer_validator
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("name")
+    Traceback (most recent call last):
+    TypeError: integer_validator() one args is passed
+
+Integer_validator is passed no args
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator()
+    Traceback (most recent call last):
+    TypeError: no args are to integer_validator()
+
+Pass 3 args to integer_validator()
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("name", 8, 16)
+    Traceback (most recent call last):
+    TypeError: integer_validator() takes hree args but, 4 were passed
+
+Pass 1 arg to Area()
+    >>> bg = BaseGeometry()
+    >>> bg.area(8)
+    Traceback (most recent call last):
+    TypeError: area() takes 1 arg but  2 were passed
+
+Pass 2 args to area()
+    >>> bg = BaseGeometry()
+    >>> bg.area(8, 8)
+    Traceback (most recent call last):
+    TypeError: area() takes 1 arg but, 3 were passed
+
+Pass Tuple 2 Method
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("id", (8,))
+    Traceback (most recent call last):
+    TypeError: id has to be of type int
+
+Pass List to Method
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("id", [8])
+    Traceback (most recent call last):
+    TypeError: id has to be of type int
+
+Pass Dict 2 Method
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("id", {8, 16})
+    Traceback (most recent call last):
+    TypeError: id has to be of type int
+
+Pass None to Method
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("id", None)
+    Traceback (most recent call last):
+    TypeError: id has to be of type int
