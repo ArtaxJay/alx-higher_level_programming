@@ -1,4 +1,3 @@
 #!/bin/bash
-# This bash script gets he byte size of the HTTP protocol
-# response header for the specified URL.
+# This bash script gets the byte size of the HTTP res header
 curl -s "$1" | wc -c
