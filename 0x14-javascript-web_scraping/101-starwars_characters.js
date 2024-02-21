@@ -12,9 +12,6 @@ req(apiUrl, (err, res, msg) => {
   }
   const movie = JSON.parse(msg);
   const charsUrls = movie.characters;
-  
-  // Counter to keep track of how many characters have been printed
-  let counter = 0;
 
   // Function to print character name and move to the next character
   const printChar = (i) => {
@@ -29,7 +26,7 @@ req(apiUrl, (err, res, msg) => {
       }
       const chars = JSON.parse(msg);
       console.log(chars.name);
-      
+
       // Print the next character recursively
       printChar(i + 1);
     });
@@ -37,4 +34,4 @@ req(apiUrl, (err, res, msg) => {
 
   // Start printing characters from the first character
   printChar(0);
-})
+});
