@@ -1,17 +1,17 @@
 $('document').ready(() => {
-  $('INPUT#btn_translate').click(translate);
+  $('INPUT#btn_translate').click(translateFunc);
   $('INPUT#language_code').focus(() => {
     $(this).keydown(e => {
       if (e.keyCode === 13) {
-        translate();
+        translateFunc();
       }
     });
   });
 });
 
-function translate () {
-  const url = 'https://www.fourtonfish.com/hellosalut/?';
-  $.get(url + $.param({ lang: $('INPUT#language_code').val() }), function (data) {
-    $('DIV#hello').html(data.hello);
-  });
+function translateFunc () {
+  const langUrl = 'https://www.fourtonfish.com/hellosalut/?';
+  $.get(langUrl + $.param({ lang: $('INPUT#language_code').val() }), res =>
+    $('DIV#hello').html(res.hello)
+  );
 }
