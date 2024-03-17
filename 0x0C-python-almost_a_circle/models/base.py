@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" This line makes this python script excutable. """
 
 
 class Base:
@@ -17,7 +18,7 @@ class Base:
         This is the class constructor function.
 
         Args:
-            id (type int: None by default): The num_id of the class Base instance.
+            id (int: None by default): The num_id of the class Base instance.
         """
         if id is not None:
             self.id = id
